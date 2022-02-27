@@ -62,17 +62,8 @@ namespace LeetCode.LinkedList
             };
             //171
             ListNode? actual = MergeTwoLists(list1, list2);
-            AssertLinkedList(actual, expected);
-        }
-
-        private void AssertLinkedList(ListNode actual, ListNode expected)
-        {
-            if (actual == null)
-                return;
-
-            Assert.AreEqual(actual.val, expected.val);
-            AssertLinkedList(actual.next, expected.next);
-        }
+            LinkedListAssertion.AssertLinkedList(actual, expected);
+        }        
 
         public ListNode MergeTwoLists(ListNode list1, ListNode list2)
         {
