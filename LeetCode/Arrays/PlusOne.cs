@@ -35,11 +35,16 @@ namespace LeetCode.Arrays.Arrays
 
         [TestMethod]
         public void TwoSumTest4()
-        {
-                                                     //0, 1, 2                        0, 1
+        {                                                     
             CollectionAssert.AreEquivalent(new int[] { 1, 0, 0 }, PlusOne(new int[] { 9, 9 }));
         }
-        
+
+        [TestMethod]
+        public void TwoSumTest5()
+        {
+            CollectionAssert.AreEquivalent(new int[] { 9, 0, 0, 0 }, PlusOne(new int[] { 8, 9, 9, 9 }));
+        }        
+
         public int[] PlusOne(int[] digits)
         {   
             //Calculate the curry if the sum larger than 9.
