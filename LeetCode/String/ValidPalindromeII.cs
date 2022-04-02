@@ -89,22 +89,16 @@ namespace LeetCode.String
             int left = 0;
             int right = s.Length - 1;
             
-            bool hasDifferent = false;
             while (left < right)
             {
                 if (s[left] != s[right])
                 {
-                    if (hasDifferent)
-                        return false;
-
-                    hasDifferent = true;
-
                     if ((s[left] == s[right-1]) && IsPure(s.Substring(left, s.Length - 2 * left - 1)))
                         return true;
-                    else if ((s[right] == s[left + 1]) && IsPure(s.Substring(left + 1, s.Length - 2 * left - 1)))
+                    if ((s[right] == s[left + 1]) && IsPure(s.Substring(left + 1, s.Length - 2 * left - 1)))
                         return true;
-                    else
-                        return false;
+                    
+                    return false;
                 }
 
                 left++;
