@@ -41,8 +41,6 @@ namespace LeetCode.Arrays
 
         public bool SearchMatrix(int[][] matrix, int target)
         {
-            bool result = false;
-
             int columns = matrix[0].Length;
             int rows = matrix.Length;
 
@@ -66,7 +64,7 @@ namespace LeetCode.Arrays
                 }
             }
 
-            return result;
+            return false;
         }
     }
 }

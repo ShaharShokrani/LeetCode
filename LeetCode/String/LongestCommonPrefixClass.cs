@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeetCode.Maths
+namespace LeetCode.String
 {
     /// <summary>
     /// https://leetcode.com/problems/longest-common-prefix/

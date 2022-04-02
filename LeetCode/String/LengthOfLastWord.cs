@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
-namespace LeetCode.Maths
+namespace LeetCode.String
 {
     /// <summary>
     /// https://leetcode.com/problems/length-of-last-word/
