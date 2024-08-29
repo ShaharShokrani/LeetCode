@@ -13,6 +13,6 @@ namespace LeetCode.LinkedList
               this.val = val;
               this.next = next;
           }
-      }
+    }
     
 }

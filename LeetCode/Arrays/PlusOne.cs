@@ -1,11 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LeetCode.Arrays.Arrays
 {
@@ -46,32 +41,28 @@ namespace LeetCode.Arrays.Arrays
         }        
 
         public int[] PlusOne(int[] digits)
-        {   
-            //Calculate the curry if the sum larger than 9.
-            int curry = digits[digits.Length - 1] + 1 > 9 ? 1 : 0;
-
-            //Init the resulted array, should be bigger if curry is 1.
-            int[] result = new int[digits.Length + curry];
-
+        {
+            List<int> result = digits.ToList();
 
             int i = digits.Length - 1;
-            result[i + curry] = (digits[i] + 1) % 10;
-            i--;
-
             while (i >= 0)
             {
-                result[i + curry] = (digits[i] + curry) % 10;
-
-                curry = digits[i] + curry + 1 > 9? 1 : 0;
-                i--;
+                if (result[i] == 9)
+                {
+                    result[i] = 0;
+                    i--;
+                }
+                else
+                {
+                    result[i]++;
+                    break;
+                }
             }
 
-            if (curry == 1)
-            {
-                result[0] = 1;
-            }
+            if (i == -1)
+                result.Insert(0, 1);
 
-            return result;
+            return result.ToArray();
         }
     }
 }
